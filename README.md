@@ -1,4 +1,4 @@
-starwars
+#SWAPI B2W
 
 Repositórios para o desafio da B2W-bit para desenvolvedor front end júnior
 Visão Geral do Projeto
