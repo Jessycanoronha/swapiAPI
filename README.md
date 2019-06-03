@@ -32,7 +32,7 @@ Basicamente você deverá escrever seu código e enquanto você efetua alteraç�
 
 ng serve
 
-O código irá rodar o plugin serve, dessa forma gerando um servidor para o desenvolvimento (http://localhost:4200/starwars) sendo assim toda alteração de código nos arquivos de origem irá recarregar automaticamente a página.
+O código irá rodar o plugin serve, dessa forma gerando um servidor para o desenvolvimento (http://localhost:4200/swapi_B2W) sendo assim toda alteração de código nos arquivos de origem irá recarregar automaticamente a página.
 Novos Componentes
 
 Para a criação de um novo componente execute o comando a seguir:
