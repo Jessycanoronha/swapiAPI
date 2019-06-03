@@ -1,0 +1,39 @@
+<sw-loading class="section--align-center" *ngIf="loading"></sw-loading>
+
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>{{ person.name }}</sw-name>
+
+  <div class="category">
+    <p class="category__paragraph">
+      <sw-characteristics>Peso:</sw-characteristics>
+      {{ person.height }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Mass:</sw-characteristics>
+      {{ person.mass }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Cor do cabelo:</sw-characteristics>
+      {{ person.hair_color }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Cor da pele:</sw-characteristics>
+      {{ person.skin_color }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Cor dos olhos:</sw-characteristics>
+      {{ person.eye_color }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Gênero:</sw-characteristics>
+      {{ person.gender }}
+    </p>
+    <p class="category__paragraph--yellow">
+      Aparece em {{ person.films?.length }} {{person.films?.length === 1 ? 'filme' : 'filmes'}}.
+    </p>
+  </div>
+  <sw-button (click)="getRandomPerson();">Próximo</sw-button>
+  <sw-button [routerLink]="['/starwars/categories']">Voltar</sw-button>
+</section>
+
+<sw-footer></sw-footer>

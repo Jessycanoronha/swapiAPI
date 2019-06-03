@@ -1,0 +1,40 @@
+<sw-loading class="section--align-center" *ngIf="loading"></sw-loading>
+
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>{{ specie.name }}</sw-name>
+
+  <div class="category">
+    <p class="category__paragraph">
+      <sw-characteristics>Classificação:</sw-characteristics>
+      {{ specie.classification }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Designação:</sw-characteristics>
+      {{ specie.designation }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Altura média:</sw-characteristics>
+      {{ specie.average_height }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Cor da pele:</sw-characteristics>
+      {{ specie.skin_colors }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Tempo médio de vida:</sw-characteristics>
+      {{ specie.average_lifespan }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Linguagem:</sw-characteristics>
+      <span class="subcategory">:</span>
+      {{ specie.language }}
+    </p>
+    <p class="category__paragraph--yellow">
+      Aparece em {{ specie.films?.length }} {{specie.films?.length === 1 ? 'filme' : 'filmes'}}.
+    </p>
+  </div>
+  <sw-button (click)="getRandomSpecie();">Próximo</sw-button>
+  <sw-button [routerLink]="['/starwars/categories']">Voltar</sw-button>
+</section>
+
+<sw-footer></sw-footer>

@@ -1,0 +1,37 @@
+<sw-loading class="section--align-center" *ngIf="loading"></sw-loading>
+
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>{{ starship.name }}</sw-name>
+
+  <div class="category">
+    <p class="category__paragraph">
+      <sw-characteristics>Modelo:</sw-characteristics>
+      {{ starship.model }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Manufatura:</sw-characteristics>
+      {{ starship.manufacturer }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Tamanho:</sw-characteristics>
+      {{ starship.length }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Passageiros:</sw-characteristics>
+      {{ starship.passengers }}
+    </p>
+
+
+    <p class="category__paragraph">
+      <sw-characteristics>Classe da nave estelar:</sw-characteristics>
+      {{ starship.starship_class }}
+    </p>
+    <p class="category__paragraph--yellow">
+     Aparece em {{ starship.films?.length }} {{starship.films?.length === 1 ? 'filme' : 'filmes'}}.
+    </p>
+  </div>
+  <sw-button (click)="getRandomStarship();">Próximo</sw-button>
+  <sw-button [routerLink]="['/starwars/categories']">Voltar</sw-button>
+</section>
+
+<sw-footer></sw-footer>

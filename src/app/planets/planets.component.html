@@ -1,0 +1,36 @@
+<sw-loading class="section--align-center" *ngIf="loading"></sw-loading>
+
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>{{ planet.name }}</sw-name>
+
+  <div class="category">
+    <p class="category__paragraph">
+      <sw-characteristics>Diâmetro:</sw-characteristics>
+      {{ planet.diameter }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Clima:</sw-characteristics>
+      {{ planet.climate }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Gravidade:</sw-characteristics>
+      {{ planet.gravity }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Terreno:</sw-characteristics>
+      {{ planet.terrain }}
+    </p>
+    
+    <p class="category__paragraph">
+      <sw-characteristics>População:</sw-characteristics>
+      {{ planet.population }}
+    </p>
+    <p class="category__paragraph--yellow">
+      Aparece em {{ planet.films?.length }} {{planet.films?.length === 1 ? 'filmes' : 'filmes'}}.
+    </p>
+  </div>
+  <sw-button (click)="getRandomPlanet();">Próximo</sw-button>
+  <sw-button [routerLink]="['/starwars/categories']">Voltar</sw-button>
+</section>
+
+<sw-footer></sw-footer>
